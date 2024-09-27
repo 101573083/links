@@ -1,7 +1,7 @@
 <h1>Number Row Characters 1 2 3 4 5 6 7 8 9 0 </h1>
 <hr>
-* ! - Exclamation Point  <br>
-* @ - At Symbol  <br>
+- ! - Exclamation Point  <br>
+- @ - At Symbol  <br>
 * `#` - Hash, Pound  <br>
 * $ - Dollar   <br>
 * % - Percent   <br>
