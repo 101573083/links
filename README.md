@@ -2,7 +2,7 @@
 <hr>
 * ! - Exclamation Point  <br>
 * @ - At Symbol  <br>
-* # - Hash, Pound  <br>
+* `#` - Hash, Pound  <br>
 * $ - Dollar   <br>
 * % - Percent   <br>
 * ^ - Arrow Up  <br>
