@@ -1,3 +1,5 @@
+[CLI commands](docs/cli.md)
+
 <h1>Number Row Characters 1 2 3 4 5 6 7 8 9 0 </h1>
 <hr>
 * ! - Exclamation Point  <br>
