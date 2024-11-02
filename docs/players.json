@@ -2,7 +2,10 @@
   {
     "Name": "Lebron James",
     "Sport": "Basketball",
-    "Team": {"Name": "Lakers","City": "Los Angeles"},
+    "Team": {
+      "Name": "Lakers",
+      "City": "Los Angeles"
+    },
     "Position": "Forward",
     "Age": 38
   },
