@@ -1,0 +1,72 @@
+-- Amanda Chan
+--Concatenate Course Name and Semester:
+SELECT concat(course_name, ' - ', semester)
+from courses;
+
+--Find Courses with Labs on Fridays:
+select course_id, course_name, lab_time
+from courses
+where lab_time like'Fri%';
+
+--Upcoming Assignments:
+select *
+from assignments 
+where due_date>date();
+
+--Count Assignments by Status:
+select status, count(*)
+from assignments
+group by status;
+
+--Longest Course Name Option 1:
+select course_name, length(course_name)
+from courses
+order by length(course_name) desc
+limit 1;
+
+--Longest Course Name Option 2:
+select course_name
+from courses
+where length(course_name)=
+(
+select max(length(course_name))
+from courses
+);
+
+--Uppercase Course Names:
+select upper(course_name)
+from courses;
+
+--Assignments Due in September Option 1:
+select title, due_date
+from assignments 
+where due_date like '%-09-%';
+
+--Assignments Due in September Option 2:
+select title, due_date
+from assignments 
+where strftime('%m', due_date) = '09';
+
+--Assignments with Missing Due Dates:
+select *
+from assignments
+where due_date is null;
+
+--Total Assignments per Course Option 1:
+select course_id, count(course_id)
+from assignments 
+group by course_id;
+
+--Total Assignments per Course Option 2:
+select course_name, count(assignments.id)
+from courses
+left join assignments 
+	on courses.course_id = assignments.course_id
+group by course_name
+
+--Courses Without Assignments (advanced):
+select course_name
+from courses 
+left join assignments
+on courses.course_id=assignments.course_id
+where assignments.course_id is null 
